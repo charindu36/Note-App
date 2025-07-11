@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-button">+</div>
+        <div class="menu-content">
+            <a href="">📆<span>Calander</span></a>
+            <a href="cal.html">🧮<span>Calculator</span></a>
+            <a href="/note.html">📝<span>Notes</span></a>
+        </div>
+    </div>
+    <section class="calculator">
+        <form >
+            <input type="text" class="display">
+        </form>
+        <div class="buttons">  
+            <button type="button" class="btn btn-yellow" onclick="appendValue('/')">/</button>
+            <button type="button" class="btn btn-yellow" onclick="appendValue('*')">*</button>
+            <button type="button" class="btn btn-yellow" onclick="appendValue('-')">-</button>
+            <button type="button" class="btn btn-yellow" onclick="appendValue('+')">+</button>
+
+            <button type="button" class="btn btn-grey" onclick="appendValue('9')">9</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('8')">8</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('7')">7</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('6')">6</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('5')">5</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('4')">4</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('3')">3</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('2')">2</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('1')">1</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('0')">0</button>
+            <button type="button" class="btn btn-grey" onclick="appendValue('.')">.</button>
+
+            <button type="button" class="btn btn-grey" onclick="remDisplay()">⌫</button>
+            <button type="button" class="btn btn-red" onclick="clearDisplay()">c</button>            
+            <button type="button" class="btn btn-green" onclick="calculate()">=</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
