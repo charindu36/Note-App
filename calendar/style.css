@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items:center ;
+    height: 100vh;
+    background-color: #333333;
+    margin: 0;
+}
+.calendar{
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #222222;
+    overflow: hidden;
+    width: 300px;
+    color: white;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.btn{
+    cursor: pointer;
+}
+#month-year{
+    font-weight: bold;
+    font-size: 20px;
+}
+.weekdays, .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+.days{
+    height: 240px;
+}
+.weekdays div, .days div{
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.days div{
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.days div:hover{
+    background-color: white;
+    color: orangered;
+}
+.days .today{
+    background-color: orangered;
+    color: white;
+}
+.days .fade{
+    color: #555;
+}
+
+/* menu */
+.menu-container {
+  z-index: 999;
+  color: var(--text-color);
+  background-color: var(--brand-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu-button {
+  transition: all 2s ease;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  z-index: 999;
+  cursor: pointer;
+}
+.menu-button:hover {
+  transform: rotate(135deg);
+}
+.menu-content {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--brand-color);
+  top: -170px;
+  border-radius: 3rem 3rem 3rem 3rem;
+  width: 50px;
+  height: 10rem;
+  padding: 10px 0;
+  box-shadow: 0px 8px 16px rgba(251, 251, 251, 0.349);
+}
+.menu-content a {
+  margin: auto;
+  padding-top: 5px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.menu-content a span {
+  display: none;
+  position: absolute;
+  left: -160%;
+  background-color: var(--brand-color);
+  width: 80x;
+  height: 20px;
+  border-radius: 3px;
+  padding: 3px;
+  color: var(--text-color);
+}
+.menu-content a:hover {
+  background-color: var(--base-transparent-90);
+}
+.menu-content a:hover span {
+  display: inline-flex;
+}
+:root {
+  --brand-color: #8b90ff;
+  --base-color: #f2f4f8;
+  --surface-color: #fff;
+  --text-color: #191b23;
+  --secondary-text-color: #3c404f;
+  --base-transparent-90: rgba(247, 247, 247, 0.9);
+  --base-transparent-100: rgba(247, 247, 247, 1);
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+}
